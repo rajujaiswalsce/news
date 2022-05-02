@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News App</title>
+    <style>
+      #navbar{
+    border: 1px solid teal;
+    height: 80px;
+}
+#search_input{
+  margin: auto;
+  align-items: center;
+}
+#sidebar{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(5,1fr);
+    gap: 10px;
+    
+}
+#sidebar h3{
+  background-color: teal;
+  width: 100px;
+  cursor: pointer;
+}
+    </style>
+  </head>
+  <body>
+    <div id="navbar">
+      <h1 >News App</h1>
+     <input id="search_input" placeholder="search News" onkeydown=""/> 
+   </div>
+   <div id="sidebar">
+     <h1>countries</h1>
+     <h3 id="in" onclick="cSearch(this.id)">India</h3>
+     <h3 id="ch" onclick="cSearch(this.id)">China</h3>
+     <h3 id="us" onclick="cSearch(this.id)">Usa</h3>
+     <h3 id="uk" onclick="cSearch(this.id)">United Kingdom</h3>
+     <h3 id="nz" onclick="cSearch(this.id)">Newzeland</h3>
+
+   </div>
+
+   <div id="results"></div>
+    <!-- Give Navbar with id "navbar"  -->
+    <!-- Navbar will have input with id search_input and a link to home page i.e. index.html -->
+    <!-- Sidebar will have id "sidebar"  -->
+    <!-- Give link to top headlines of countries in sidebar with id as their country codes 
+    india :- in
+    china :- ch
+    usa :- us
+    uk : uk
+    Newzeland :- nz -->
+
+    <!-- Append results inside div with id "results"  -->
+    <!-- News divs will have class "news"  -->
+  </body>
+  <script src="scripts/index.js" type="module"></script>
+</html>
